@@ -8,15 +8,17 @@
 		</script>
 	</head>
 	<body>
-		<label for="weight">Weight</label>
-		<input name="weight" type="number">
-		<label for="mail">Type of mail</label>
-		<select name="mail">
-			<option value="stamp">Letters(Stamped)</option>
-			<option value="meter">Letters(Metered)</option>
-			<option value="flat">Large Envelopes (Flats)</option>
-			<option value="firstclass">First-Class Package Service-Retail </option>
-		</select>
-		<button onclick="/result">Submit</button>
+		<form action="/results" method="GET">
+			<label for="weight">Weight</label>
+			<input name="weight" type="number">
+			<label for="mail">Type of mail</label>
+			<select name="mail">
+				<option value="stamp">Letters(Stamped)</option>
+				<option value="meter">Letters(Metered)</option>
+				<option value="flat">Large Envelopes (Flats)</option>
+				<option value="firstclass">First-Class Package Service-Retail </option>
+			</select>
+			<input type="submit"></input>
+		</form>
 	</body>
 </html>
