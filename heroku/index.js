@@ -2,6 +2,8 @@ const express = require('express')
 const path = require('path')
 const { Pool } = require('pg')
 
+var favicon = require('serve-favicon');
+
 const pool = new Pool()
 
 const PORT = process.env.PORT || 5000
@@ -17,6 +19,7 @@ function getThread(){
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(favicon(__dirname + '/public/images/favicon.ico'))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
